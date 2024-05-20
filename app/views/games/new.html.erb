@@ -1,0 +1,20 @@
+<div class="container d-flex align-items-center justify-content-center w-100" style="flex-direction: column">
+  <div>
+    <img src="https://tse1.mm.bing.net/th/id/OIG1._Zzi_NEFdLrSJJvZ4fK8?pid=ImgGn" alt="logo" style="width: 40vw; margin-top: -30px; margin-bottom: -30px">
+  </div>
+  <div class="container d-flex align-items-center justify-content-center w-100" style="margin-top: 0vh">
+    <ol style="list-style: none; padding: 0; gap: 20px" class="d-flex align-items-center justify-content-center">
+      <% @letters.each do |letter| %>
+        <li class="btn btn-primary d-flex align-items-center justify-content-center" style="width: 5vw; height: 5vw"><%= letter.capitalize %></li>
+      <% end %>
+    </ol>
+  </div>
+  <div class="container d-flex align-items-center justify-content-center">
+    <form action="score" class="d-flex" method="post" style="gap: 15px; width: 50vw" data-turbo="false">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <%= hidden_field_tag :letters, @letters %>
+      <input type="text" class="form-control" name="word" placeholder="What is the longest word you can find ?">
+      <input type="submit" class="btn btn-primary" value="SUBMIT WORD">
+    </form>
+  </div>
+</div>

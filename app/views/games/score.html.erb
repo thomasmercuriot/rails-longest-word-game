@@ -1,0 +1,20 @@
+<div class="container d-flex align-items-center justify-content-center w-100" style="flex-direction: column">
+  <div>
+    <img src="https://tse1.mm.bing.net/th/id/OIG1._Zzi_NEFdLrSJJvZ4fK8?pid=ImgGn" alt="logo" style="width: 40vw; margin-top: -30px; margin-bottom: -30px">
+  </div>
+  <div class="container d-flex align-items-center justify-content-center w-100" style="margin-top: 0vh">
+    <ol style="list-style: none; padding: 0; gap: 20px" class="d-flex align-items-center justify-content-center">
+      <% @input.each do |char| %>
+        <li class="btn btn-primary d-flex align-items-center justify-content-center" style="width: 5vw; height: 5vw"><%= char.capitalize %></li>
+      <% end %>
+    </ol>
+  </div>
+  <div class="container d-flex align-items-center justify-content-center">
+    <%= @result %>
+  </div>
+  <div class="container d-flex align-items-center justify-content-center">
+    <form action="/new" class="d-flex align-items-center justify-content-center" method="get" style="gap: 15px; width: 50vw" data-turbo="false">
+      <input type="submit" class="btn btn-primary" value="&#8634" style="width: 5vw; height: 5vw; margin-top: 15px">
+    </form>
+  </div>
+</div>
